@@ -1,0 +1,490 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local InvView = Instance.new("ScreenGui")
+local BackgroundFrame = Instance.new("Frame")
+local InvView_2 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local UIGradient = Instance.new("UIGradient")
+local AmbientShadow = Instance.new("ImageLabel")
+local PenumbraShadow = Instance.new("ImageLabel")
+local UmbraShadow = Instance.new("ImageLabel")
+local Player = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local UsernameText = Instance.new("TextLabel")
+local UIGradient_2 = Instance.new("UIGradient")
+local SubText = Instance.new("TextLabel")
+local UIGradient_3 = Instance.new("UIGradient")
+local UIGradient_4 = Instance.new("UIGradient")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_3 = Instance.new("UICorner")
+local UIGradient_5 = Instance.new("UIGradient")
+local TextButton = Instance.new("TextButton")
+local UIGradient_6 = Instance.new("UIGradient")
+local TextLabel = Instance.new("TextLabel")
+local UIGradient_7 = Instance.new("UIGradient")
+local UICorner_4 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_5 = Instance.new("UICorner")
+local UIGradient_8 = Instance.new("UIGradient")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UIGradient_9 = Instance.new("UIGradient")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local UIGradient_10 = Instance.new("UIGradient")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local UIGradient_11 = Instance.new("UIGradient")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local UIGradient_12 = Instance.new("UIGradient")
+local ImageLabel_6 = Instance.new("ImageLabel")
+local UIGradient_13 = Instance.new("UIGradient")
+local ImageLabel_7 = Instance.new("ImageLabel")
+local UIGradient_14 = Instance.new("UIGradient")
+local ImageLabel_8 = Instance.new("ImageLabel")
+local UIGradient_15 = Instance.new("UIGradient")
+local ImageLabel_9 = Instance.new("ImageLabel")
+local UIGradient_16 = Instance.new("UIGradient")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Frame = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UIGradient_17 = Instance.new("UIGradient")
+
+--Properties:
+
+InvView.Name = "InvView"
+InvView.Parent = game:GetService("CoreGui")
+InvView.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+InvView.IgnoreGuiInset = true
+InvView.Enabled = false
+
+BackgroundFrame.Name = "BackgroundFrame"
+BackgroundFrame.Parent = InvView
+BackgroundFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BackgroundFrame.BackgroundTransparency = 0.250
+BackgroundFrame.Size = UDim2.new(1, 0, 1, 0)
+BackgroundFrame.ZIndex = 0
+
+InvView_2.Name = "InvView"
+InvView_2.Parent = BackgroundFrame
+InvView_2.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+InvView_2.Position = UDim2.new(0.226008341, 0, 0.169537619, 0)
+InvView_2.Size = UDim2.new(0.547287881, 0, 0.658369362, 0)
+
+UICorner.CornerRadius = UDim.new(0, 16)
+UICorner.Parent = InvView_2
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(228, 228, 228))}
+UIGradient.Rotation = 90
+UIGradient.Parent = InvView_2
+
+AmbientShadow.Name = "AmbientShadow"
+AmbientShadow.Parent = InvView_2
+AmbientShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+AmbientShadow.BackgroundTransparency = 1.000
+AmbientShadow.Position = UDim2.new(0.5, 0, 0.507057548, 0)
+AmbientShadow.Size = UDim2.new(1.00635326, 0, 1.01176262, 0)
+AmbientShadow.ZIndex = 0
+AmbientShadow.Image = "rbxassetid://1316045217"
+AmbientShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+AmbientShadow.ImageTransparency = 0.900
+AmbientShadow.ScaleType = Enum.ScaleType.Slice
+AmbientShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+PenumbraShadow.Name = "PenumbraShadow"
+PenumbraShadow.Parent = InvView_2
+PenumbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+PenumbraShadow.BackgroundTransparency = 1.000
+PenumbraShadow.Position = UDim2.new(0.5, 0, 0.502352536, 0)
+PenumbraShadow.Size = UDim2.new(1.02287161, 0, 1.0423454, 0)
+PenumbraShadow.ZIndex = 0
+PenumbraShadow.Image = "rbxassetid://1316045217"
+PenumbraShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+PenumbraShadow.ImageTransparency = 0.900
+PenumbraShadow.ScaleType = Enum.ScaleType.Slice
+PenumbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+UmbraShadow.Name = "UmbraShadow"
+UmbraShadow.Parent = InvView_2
+UmbraShadow.AnchorPoint = Vector2.new(0.5, 0.5)
+UmbraShadow.BackgroundTransparency = 1.000
+UmbraShadow.Position = UDim2.new(0.5, 0, 0.514115155, 0)
+UmbraShadow.Size = UDim2.new(1.01270652, 0, 1.02352524, 0)
+UmbraShadow.ZIndex = 0
+UmbraShadow.Image = "rbxassetid://1316045217"
+UmbraShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+UmbraShadow.ImageTransparency = 0.900
+UmbraShadow.ScaleType = Enum.ScaleType.Slice
+UmbraShadow.SliceCenter = Rect.new(10, 10, 118, 118)
+
+Player.Name = "Player"
+Player.Parent = InvView_2
+Player.BackgroundColor3 = Color3.fromRGB(14, 14, 14)
+Player.ClipsDescendants = true
+Player.Size = UDim2.new(0.395831794, 0, 0.997825623, 0)
+
+UICorner_2.CornerRadius = UDim.new(0, 16)
+UICorner_2.Parent = Player
+
+UsernameText.Name = "UsernameText"
+UsernameText.Parent = Player
+UsernameText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UsernameText.BackgroundTransparency = 1.000
+UsernameText.Position = UDim2.new(0.217827007, 0, 0.496676296, 0)
+UsernameText.Size = UDim2.new(0.56497246, 0, 0.0801601112, 0)
+UsernameText.ZIndex = 2
+UsernameText.Font = Enum.Font.GothamBlack
+UsernameText.Text = "@Supbloxer111"
+UsernameText.TextColor3 = Color3.fromRGB(200, 200, 200)
+UsernameText.TextSize = 18.000
+UsernameText.TextWrapped = true
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_2.Rotation = 90
+UIGradient_2.Parent = UsernameText
+
+SubText.Name = "SubText"
+SubText.Parent = Player
+SubText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SubText.BackgroundTransparency = 1.000
+SubText.Position = UDim2.new(0.217827007, 0, 0.448697835, 0)
+SubText.Size = UDim2.new(0.56497246, 0, 0.0471530072, 0)
+SubText.ZIndex = 2
+SubText.Font = Enum.Font.GothamBold
+SubText.Text = "You are viewing the inventory of"
+SubText.TextColor3 = Color3.fromRGB(222, 222, 222)
+SubText.TextSize = 16.000
+
+UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(207, 207, 207))}
+UIGradient_3.Rotation = 90
+UIGradient_3.Parent = SubText
+
+UIGradient_4.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_4.Rotation = 90
+UIGradient_4.Parent = Player
+
+UIAspectRatioConstraint.Parent = Player
+UIAspectRatioConstraint.AspectRatio = 0.734
+
+ImageLabel.Parent = Player
+ImageLabel.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+ImageLabel.Position = UDim2.new(0.338400662, 0, 0.169454485, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "https://www.roblox.com/headshot-thumbnail/image?userId=1841015749&width=180&height=180"
+
+UICorner_3.CornerRadius = UDim.new(0, 999999)
+UICorner_3.Parent = ImageLabel
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_5.Rotation = 90
+UIGradient_5.Parent = ImageLabel
+
+TextButton.Parent = Player
+TextButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextButton.Position = UDim2.new(0.296863854, 0, 0.772464573, 0)
+TextButton.Size = UDim2.new(0, 125, 0, 36)
+TextButton.AutoButtonColor = false
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = " "
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_6.Rotation = 90
+UIGradient_6.Parent = TextButton
+
+TextLabel.Parent = TextButton
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(1.00000012, 0, 0.972974598, 0)
+TextLabel.ZIndex = 0
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.Text = "View Inventory"
+TextLabel.TextColor3 = Color3.fromRGB(253, 255, 255)
+TextLabel.TextSize = 12.000
+TextLabel.TextWrapped = true
+
+UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_7.Rotation = 90
+UIGradient_7.Parent = TextLabel
+
+UICorner_4.CornerRadius = UDim.new(0, 6)
+UICorner_4.Parent = TextButton
+
+TextBox.Parent = Player
+TextBox.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+TextBox.Position = UDim2.new(0.0851295963, 0, 0.651690483, 0)
+TextBox.Size = UDim2.new(0, 254, 0, 34)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.GothamMedium
+TextBox.PlaceholderColor3 = Color3.fromRGB(50, 50, 50)
+TextBox.PlaceholderText = "Player Name"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(224, 224, 224)
+TextBox.TextSize = 12.000
+
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = TextBox
+
+UIGradient_8.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(99, 99, 99))}
+UIGradient_8.Rotation = 90
+UIGradient_8.Parent = TextBox
+
+ImageLabel_2.Parent = Player
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.Position = UDim2.new(0.820173025, 0, 0.531004906, 0)
+ImageLabel_2.Rotation = 1506.000
+ImageLabel_2.Size = UDim2.new(0.128402829, 0, 0.0943060145, 0)
+ImageLabel_2.ZIndex = -1
+ImageLabel_2.Image = "rbxassetid://12717555955"
+ImageLabel_2.ImageColor3 = Color3.fromRGB(110, 255, 103)
+ImageLabel_2.ImageTransparency = 0.500
+
+UIGradient_9.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.33, Color3.fromRGB(240, 240, 240)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(92, 92, 92))}
+UIGradient_9.Rotation = 90
+UIGradient_9.Parent = ImageLabel_2
+
+ImageLabel_3.Parent = Player
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.Position = UDim2.new(0.0963021219, 0, 0.671426237, 0)
+ImageLabel_3.Rotation = -15.000
+ImageLabel_3.Size = UDim2.new(0.192604244, 0, 0.141459018, 0)
+ImageLabel_3.ZIndex = -1
+ImageLabel_3.Image = "rbxassetid://12717483685"
+ImageLabel_3.ImageTransparency = 0.500
+
+UIGradient_10.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_10.Rotation = 90
+UIGradient_10.Parent = ImageLabel_3
+
+ImageLabel_4.Parent = Player
+ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_4.BackgroundTransparency = 1.000
+ImageLabel_4.Position = UDim2.new(0.653249383, 0, 0.712726593, 0)
+ImageLabel_4.Rotation = 135.000
+ImageLabel_4.Size = UDim2.new(0.195814312, 0, 0.14381668, 0)
+ImageLabel_4.ZIndex = -1
+ImageLabel_4.Image = "rbxassetid://12717460312"
+ImageLabel_4.ImageTransparency = 0.500
+
+UIGradient_11.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_11.Rotation = 90
+UIGradient_11.Parent = ImageLabel_4
+
+ImageLabel_5.Parent = Player
+ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_5.BackgroundTransparency = 1.000
+ImageLabel_5.Position = UDim2.new(0.12358772, 0, 0.207681924, 0)
+ImageLabel_5.Rotation = -12.000
+ImageLabel_5.Size = UDim2.new(0.202234447, 0, 0.148531973, 0)
+ImageLabel_5.ZIndex = -1
+ImageLabel_5.Image = "rbxassetid://12717460312"
+ImageLabel_5.ImageTransparency = 0.500
+
+UIGradient_12.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_12.Rotation = 90
+UIGradient_12.Parent = ImageLabel_5
+
+ImageLabel_6.Parent = Player
+ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_6.BackgroundTransparency = 1.000
+ImageLabel_6.Position = UDim2.new(0.428544432, 0, 0.141601309, 0)
+ImageLabel_6.Rotation = -12.000
+ImageLabel_6.Size = UDim2.new(0.128402829, 0, 0.0943060145, 0)
+ImageLabel_6.ZIndex = -1
+ImageLabel_6.Image = "rbxassetid://12717555955"
+ImageLabel_6.ImageColor3 = Color3.fromRGB(110, 255, 103)
+ImageLabel_6.ImageTransparency = 0.500
+
+UIGradient_13.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.33, Color3.fromRGB(240, 240, 240)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(92, 92, 92))}
+UIGradient_13.Rotation = 90
+UIGradient_13.Parent = ImageLabel_6
+
+ImageLabel_7.Parent = Player
+ImageLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_7.BackgroundTransparency = 1.000
+ImageLabel_7.Position = UDim2.new(0.709425628, 0, 0.207681924, 0)
+ImageLabel_7.Rotation = 22.000
+ImageLabel_7.Size = UDim2.new(0.240755305, 0, 0.17682378, 0)
+ImageLabel_7.ZIndex = -1
+ImageLabel_7.Image = "rbxassetid://12717483685"
+ImageLabel_7.ImageTransparency = 0.500
+
+UIGradient_14.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(176, 176, 176))}
+UIGradient_14.Rotation = 90
+UIGradient_14.Parent = ImageLabel_7
+
+ImageLabel_8.Parent = Player
+ImageLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_8.BackgroundTransparency = 1.000
+ImageLabel_8.Position = UDim2.new(0.126797736, 0, 0.42008388, 0)
+ImageLabel_8.Rotation = 1506.000
+ImageLabel_8.Size = UDim2.new(0.128402829, 0, 0.0943060145, 0)
+ImageLabel_8.ZIndex = -1
+ImageLabel_8.Image = "rbxassetid://12717555955"
+ImageLabel_8.ImageColor3 = Color3.fromRGB(110, 255, 103)
+ImageLabel_8.ImageTransparency = 0.500
+
+UIGradient_15.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.33, Color3.fromRGB(240, 240, 240)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(92, 92, 92))}
+UIGradient_15.Rotation = 90
+UIGradient_15.Parent = ImageLabel_8
+
+ImageLabel_9.Parent = Player
+ImageLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_9.BackgroundTransparency = 1.000
+ImageLabel_9.Position = UDim2.new(0.348292649, 0, 0.736326814, 0)
+ImageLabel_9.Rotation = 197.000
+ImageLabel_9.Size = UDim2.new(0.128402829, 0, 0.0943060145, 0)
+ImageLabel_9.ZIndex = -1
+ImageLabel_9.Image = "rbxassetid://12717555955"
+ImageLabel_9.ImageColor3 = Color3.fromRGB(110, 255, 103)
+ImageLabel_9.ImageTransparency = 0.500
+
+UIGradient_16.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(0.33, Color3.fromRGB(240, 240, 240)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(92, 92, 92))}
+UIGradient_16.Rotation = 90
+UIGradient_16.Parent = ImageLabel_9
+
+UIAspectRatioConstraint_2.Parent = InvView_2
+UIAspectRatioConstraint_2.AspectRatio = 1.851
+
+ScrollingFrame.Parent = InvView_2
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.423645914, 0, 0.0524130352, 0)
+ScrollingFrame.Size = UDim2.new(0, 436, 0, 393)
+ScrollingFrame.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 6, 0)
+ScrollingFrame.ScrollBarThickness = 2
+ScrollingFrame.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+
+UIGridLayout.Parent = ScrollingFrame
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 8, 0, 5)
+UIGridLayout.CellSize = UDim2.new(0, 430, 0, 45)
+
+Frame.Parent = ScrollingFrame
+Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Frame.Size = UDim2.new(0, 100, 0, 100)
+
+UICorner_6.Parent = Frame
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.047110945, 0, 0.304586798, 0)
+TextLabel_2.Size = UDim2.new(0.56497246, 0, 0.35826391, 0)
+TextLabel_2.ZIndex = 2
+TextLabel_2.Font = Enum.Font.GothamBold
+TextLabel_2.Text = "Golden Unstable"
+TextLabel_2.TextColor3 = Color3.fromRGB(222, 222, 222)
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+UIGradient_17.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(207, 207, 207))}
+UIGradient_17.Rotation = 90
+UIGradient_17.Parent = TextLabel_2
+
+-- Scripts:
+
+local function XUJFMSI_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	
+	script.Parent.MouseButton1Click:Connect(function()
+			local goddamn = script.Parent.Parent.TextBox.Text
+	
+			script.Parent.Parent.UsernameText.Text = goddamn
+			script.Parent.Parent.SubText.Text = "You are viewing the inventory of"
+			script.Parent.Parent.ImageLabel.Image = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game:GetService("Players")[goddamn].UserId .. "&width=180&height=180"
+	
+			for _,again in pairs(game:GetService("CoreGui").InvView.BackgroundFrame.InvView.ScrollingFrame:GetChildren()) do
+				if again:IsA("Frame") then
+					again:Destroy()
+				end
+			end
+	
+			wait(0.1)
+	
+			for _,skaigs in pairs(game:GetService("Players")[goddamn].trails:GetChildren()) do
+				local Frame = Instance.new("Frame")
+				local UICorner = Instance.new("UICorner")
+				local TextLabel = Instance.new("TextLabel")
+				local UIGradient = Instance.new("UIGradient")
+	
+	
+	
+				Frame.Parent = game:GetService("CoreGui").InvView.BackgroundFrame.InvView.ScrollingFrame
+				Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+				Frame.Size = UDim2.new(0, 100, 0, 100)
+	
+				UICorner.Parent = Frame
+	
+				TextLabel.Parent = Frame
+				TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+				TextLabel.BackgroundTransparency = 1.000
+				TextLabel.Position = UDim2.new(0.047110945, 0, 0.304586798, 0)
+				TextLabel.Size = UDim2.new(0.56497246, 0, 0.35826391, 0)
+				TextLabel.ZIndex = 2
+				TextLabel.Font = Enum.Font.GothamBold
+				TextLabel.Text = skaigs.Name
+				TextLabel.TextColor3 = Color3.fromRGB(222, 222, 222)
+				TextLabel.TextSize = 14.000
+				TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+	
+				UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(207, 207, 207))}
+				UIGradient.Rotation = 90
+				UIGradient.Parent = TextLabel
+			end
+	end)
+end
+coroutine.wrap(XUJFMSI_fake_script)()
+local function QFHSDX_fake_script() -- InvView_2.Dragify 
+	local script = Instance.new('LocalScript', InvView_2)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0.50
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(QFHSDX_fake_script)()
