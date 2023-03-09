@@ -1,0 +1,329 @@
+local Rayfield = loadstring(game:HttpGet('https://pastebin.com/raw/Ns03iNfq'))()
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+local PlayerGui = Player.PlayerGui
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VelocityDsc/badhub/main/SpeedCityInvView", true))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "badhub - Speed City",
+   LoadingTitle = "badhub",
+   LoadingSubtitle = "Speed City",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "baduhb"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   }
+})
+local PlayerTab = Window:CreateTab("Player", 9766672602) -- Title, Image
+local GameTab = Window:CreateTab("Orbs", 12689980465) -- Title, Image
+local ShopTab = Window:CreateTab("Crates", 12689979456) -- Title, Image
+local TeleportationTab = Window:CreateTab("Teleport", 12689978575) -- Title, Image
+local ChosenCrate = "Happy"
+
+--///////////////////////////////////////////////////////////////////////
+--//////////////////////////////  Player  ///////////////////////////////
+--///////////////////////////////////////////////////////////////////////
+
+local Section = PlayerTab:CreateSection("LocalPlayer Modifications")
+
+
+
+local MainMap = GameTab:CreateSection("Main Map")
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Main Map Orbs",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	getgenv().CityOrb = true
+		while CityOrb == true do
+    if game:GetService("Workspace").MainMap.Spawners.Spawner:FindFirstChild("Orb100") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").MainMap.Spawners.Spawner.Orb100.Outside.Position)
+	elseif game:GetService("Workspace").MainMap.Spawners.Spawner:FindFirstChild("Orb75") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").MainMap.Spawners.Spawner.Orb75.Outside.Position)
+	elseif game:GetService("Workspace").MainMap.Spawners.Spawner:FindFirstChild("Orb50") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").MainMap.Spawners.Spawner.Orb50.Outside.Position)
+	elseif game:GetService("Workspace").MainMap.Spawners.Spawner:FindFirstChild("Orb25") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").MainMap.Spawners.Spawner.Orb25.Outside.Position)
+	else
+		game:GetService("Workspace").MainMap.Spawners.Spawner:Destroy()
+	end
+			wait()
+		end
+	else
+	getgenv().CityOrb = false
+	end
+	end,
+})
+
+
+local WinterLoss = GameTab:CreateSection("Winter Map")
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Winter Orbs",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	getgenv().CityOrb = true
+		while CityOrb == true do
+            if game:GetService("Workspace").HolidayMap.Spawners.Spawner:FindFirstChild("Santa") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").HolidayMap.Spawners.Spawner.Santa.Outside.Position)
+			elseif game:GetService("Workspace").HolidayMap.Spawners.Spawner:FindFirstChild("Elf") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").HolidayMap.Spawners.Spawner.Elf.Outside.Position)
+			else
+			game:GetService("Workspace").HolidayMap.Spawners.Spawner:Destroy()
+			end
+			wait()
+		end
+	else
+	getgenv().CityOrb = false
+	end
+	end,
+})
+
+local OrigMap = GameTab:CreateSection("Original Map")
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Old Map Orbs",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	getgenv().CityOrb = true
+		while CityOrb == true do
+            if game:GetService("Workspace").OldMap.Spawners.Spawner:FindFirstChild("Old1") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").OldMap.Spawners.Spawner.Old1.Outside.Position)
+	elseif game:GetService("Workspace").OldMap.Spawners.Spawner:FindFirstChild("Old2") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").OldMap.Spawners.Spawner.Old2.Outside.Position)
+				elseif game:GetService("Workspace").OldMap.Spawners.Spawner:FindFirstChild("Old3") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").OldMap.Spawners.Spawner.Old3.Outside.Position)
+	else
+			game:GetService("Workspace").OldMap.Spawners.Spawner:Destroy()
+	end
+			wait()
+		end
+	else
+	getgenv().CityOrb = false
+	end
+	end,
+})
+
+local Volcano = GameTab:CreateSection("Volcano Map")
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Volcano Map Orbs",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	getgenv().CityOrb = true
+		while CityOrb == true do
+            if game:GetService("Workspace").VolcanoMap.Spawners.Spawner:FindFirstChild("Volcano1") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").VolcanoMap.Spawners.Spawner.Volcano1.Outside.Position)
+	elseif game:GetService("Workspace").VolcanoMap.Spawners.Spawner:FindFirstChild("Volcano2") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").VolcanoMap.Spawners.Spawner.Volcano2.Outside.Position)
+	elseif game:GetService("Workspace").VolcanoMap.Spawners.Spawner:FindFirstChild("Volcano3") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").VolcanoMap.Spawners.Spawner.Volcano3.Outside.Position)
+				else
+			game:GetService("Workspace").VolcanoMap.Spawners.Spawner:Destroy()
+	end
+			wait()
+		end
+	else
+	getgenv().CityOrb = false
+	end
+	end,
+})
+
+local Beach = GameTab:CreateSection("Beach Map")
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Beach Map Orbs",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	getgenv().CityOrb = true
+		while CityOrb == true do
+            if game:GetService("Workspace").BeachMap.BeachOrbs:FindFirstChild("Beach3") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").BeachMap.BeachOrbs.Beach3.Outside.Position)
+			elseif game:GetService("Workspace").BeachMap.BeachOrbs:FindFirstChild("Beach2") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").BeachMap.BeachOrbs.Beach2.Outside.Position)
+			elseif game:GetService("Workspace").BeachMap.BeachOrbs:FindFirstChild("Beach1") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").BeachMap.BeachOrbs.Beach1.Outside.Position)
+	end
+			wait()
+		end
+	else
+	getgenv().CityOrb = false
+	end
+	end,
+})
+
+local Section4 = GameTab:CreateSection("Ghost City")
+
+
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Ghost City Orbs",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	getgenv().CityOrb = true
+		while CityOrb == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("GhostMega2") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega.GhostMega2.Outside.Position)
+	elseif game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild("GhostMega") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega.GhostMega.Outside.Position)
+			else
+			game:GetService("Workspace").GhostCity.GhostOrbsMega.Spawner:Destroy()
+	end
+			wait()
+		end
+	else
+	getgenv().CityOrb = false
+	end
+	end,
+})
+
+local TrillionaireCity = GameTab:CreateSection("Trillionaire City")
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Trillionaire City Orbs",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	getgenv().CityOrb = true
+		while CityOrb == true do
+            if game:GetService("Workspace").TrillionaireCity.TrillionaireOrbs:FindFirstChild("Trillionaire") then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").TrillionaireCity.TrillionaireOrbs.Trillionaire.Outside.Position)
+			end
+			wait()
+		end
+	else
+	getgenv().CityOrb = false
+	end
+	end,
+})
+
+local CrateDropdown = TeleportationTab:CreateDropdown({
+    Name = "Teleport",
+    Options = {"Main Map","Holiday Map","Old Map","Volcano Map","Beach Map","Trillionaire City","Ghost City"},
+    CurrentOption = "MainMap",
+    Flag = "CrateDropdownFr", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Option)
+        if Option == "Main Map" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 30.9980049, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		elseif Option == "Holiday Map" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4680.05566, 1799.30164, -2813.43042, 0.998682499, 2.74817302e-09, -0.0513154939, -5.44843948e-09, 1, -5.24809955e-08, 0.0513154939, 5.26914405e-08, 0.998682499)
+		elseif Option == "Old Map" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2388, 2742.4978, 390, 1, -2.66421161e-08, -1.13693065e-14, 2.66421161e-08, 1, 3.76773457e-08, 1.03655022e-14, -3.76773457e-08, 1)
+		elseif Option == "Volcano Map" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1270, 258.594482, 2022, 1, 9.16371476e-08, -9.85315311e-15, -9.16371476e-08, 1, -3.53292471e-08, 6.61568138e-15, 3.53292471e-08, 1)
+		elseif Option == "Beach Map" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3624.00562, 67.7395248, 1018.45709, 0.999986172, 3.45591729e-07, 0.00525691034, -3.44176954e-07, 1, -2.70028011e-07, -0.00525691034, 2.6821499e-07, 0.999986172)
+		elseif Option == "Ghost City" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3825.7041, -33.801918, 7304.7002, 1, 4.6416046e-10, -4.94060366e-08, -4.64160321e-10, 1, 2.74975531e-09, 4.94060366e-08, -2.74975531e-09, 1)
+		elseif Option == "Trillionaire City" then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1506.11, 100.4, 5914.46)
+		end
+    end,
+})
+
+local WalkSpeedSlider = PlayerTab:CreateSlider({
+    Name = "Walkspeed",
+    Range = {16, 250},
+    Increment = 1,
+    Suffix = "studs",
+    CurrentValue = 16,
+    Flag = "WalkSpeedSlider", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        getHumanoid().WalkSpeed = Value
+    end,
+})
+
+local JumpPowerSlider = PlayerTab:CreateSlider({
+    Name = "JumpPower",
+    Range = {50, 250},
+    Increment = 1,
+    Suffix = "studs",
+    CurrentValue = 16,
+    Flag = "JumpPowerSlider", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        getHumanoid().JumpPower = Value
+    end,
+})
+local Section2 = ShopTab:CreateSection("Normal Crates")
+
+local CrateDropdown = ShopTab:CreateDropdown({
+    Name = "Crate",
+    Options = {"Happy","King Ghost","Sad","Angry","Scared","Surprised","Zombie Ghost"},
+    CurrentOption = "Happy",
+    Flag = "AEDropdown", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Option)
+        ChosenCrate = Option
+    end,
+})
+
+local Toggle = ShopTab:CreateToggle({
+   Name = "Autofarm Chosen Crate",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	getgenv().Farming1 = true
+		while Farming1 == true do
+            if game:GetService("Workspace").GhostCity.GhostOrbsMega:FindFirstChild(ChosenCrate) then 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").GhostCity.GhostOrbsMega[ChosenCrate].Crate.Position)
+			end
+			wait()
+		end
+	else
+	getgenv().Farming1 = false
+	end
+	end,
+})
+
+
+local Section3 = ShopTab:CreateSection("Robux Crates")
+
+local Sectionagain = PlayerTab:CreateSection("Visual Menus")
+
+local Toggle = PlayerTab:CreateToggle({
+   Name = "Trail View Menu",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	game:GetService("CoreGui").InvView.Enabled = true
+	else
+	game:GetService("CoreGui").InvView.Enabled = false
+	end
+	end,
+})
+
+
+local Toggle = PlayerTab:CreateToggle({
+   Name = "Admin Button",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+	if Value then
+	game:GetService("Players").LocalPlayer.PlayerGui.Creator.AdminButton.Visible = true
+	else
+	game:GetService("Players").LocalPlayer.PlayerGui.Creator.AdminButton.Visible = false
+	end
+	end,
+})
+
+init()
