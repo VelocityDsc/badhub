@@ -1,0 +1,137 @@
+local Rayfield = loadstring(game:HttpGet('https://pastebin.com/raw/Ns03iNfq'))()
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+local PlayerGui = Player.PlayerGui
+
+local function getHumanoid()
+    return game:GetService("Players").LocalPlayer.Character.Humanoid
+end
+local function getHRP()
+    return game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+end
+
+
+
+local Window = Rayfield:CreateWindow({
+   Name = "badhub - Anime Idle Simulator",
+   LoadingTitle = "badhub",
+   LoadingSubtitle = "Anime Idle Simulator",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "baduhb"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   }
+})
+local PlayerTab = Window:CreateTab("Player", 9766672602) -- Title, Image
+local GameTab = Window:CreateTab("Main", 12689980465) -- Title, Image
+local ShopTab = Window:CreateTab("Shop", 12689979456) -- Title, Image
+local TeleportationTab = Window:CreateTab("Teleport", 12689978575) -- Title, Image
+
+local Section = PlayerTab:CreateSection("LocalPlayer Modifications")
+
+local WalkSpeedSlider = PlayerTab:CreateSlider({
+    Name = "Walkspeed",
+    Range = {16, 250},
+    Increment = 1,
+    Suffix = "studs",
+    CurrentValue = 16,
+    Flag = "WalkSpeedSlider",
+    Callback = function(Value)
+        getHumanoid().WalkSpeed = Value
+    end,
+})
+
+local JumpPowerSlider = PlayerTab:CreateSlider({
+    Name = "Jumppower",
+    Range = {50, 250},
+    Increment = 1,
+    Suffix = "studs",
+    CurrentValue = 16,
+    Flag = "JumpPowerSlider",
+    Callback = function(Value)
+        getHumanoid().JumpPower = Value
+    end,
+})
+
+local CombatNow = GameTab:CreateSection("Combat")
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Autoswing",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+	if Value then
+	getgenv().Farming1 = true
+		while Farming1 == true do
+		local ohString1 = "Swing"
+
+		game:GetService("ReplicatedStorage")._GAME._MODULES.Utilities.NetworkUtility.Functions.Weapon:InvokeServer(ohString1)
+			wait()
+		end
+	else
+	getgenv().Farming1 = false
+	end
+	end,
+})
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Autocollect",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+	if Value then
+	getgenv().Farming1 = true
+		while Farming1 == true do
+		for _,orbs in pairs(workspace:GetChildren()) do
+		local ohTable1 = {orbs.Name}
+
+		game:GetService("ReplicatedStorage")._GAME._MODULES.Utilities.NetworkUtility.Events.CollectOrbs:FireServer(ohTable1)
+		end
+			wait()
+		end
+	else
+	getgenv().Farming1 = false
+	end
+	end,
+})
+
+local SectionAgain = GameTab:CreateSection("Allies")
+
+local Button = GameTab:CreateButton({
+   Name = "Hire",
+   Callback = function()
+	local ohString1 = "Hire"
+
+	game:GetService("ReplicatedStorage")._GAME._MODULES.Utilities.NetworkUtility.Events.Allies:FireServer(ohString1)
+   end,
+})
+
+local Toggle = GameTab:CreateToggle({
+   Name = "Auto Upgrade Allies",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+	if Value then
+	getgenv().Farming1 = true
+		while Farming1 == true do
+		for _,damnallies in pairs(workspace.Game.PlayerIslands[game.Players.LocalPlayer.Name].Allies:GetChildren()) do
+local ohString1 = "Upgrade"
+local ohNumber2 = tonumber(damnallies.Name)
+local ohNumber3 = 1
+
+game:GetService("ReplicatedStorage")._GAME._MODULES.Utilities.NetworkUtility.Events.Allies:FireServer(ohString1, ohNumber2, ohNumber3)
+		end
+			wait()
+		end
+	else
+	getgenv().Farming1 = false
+	end
+	end,
+})
+
+init()
